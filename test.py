@@ -1,33 +1,62 @@
-# import tkinter as tk
-# from tkinter import ttk
+# from tkinter import *
 
-
-# def return_pressed(event):
-#     print('Return key pressed.')
-
-
-# root = tk.Tk()
-
-# btn = ttk.Button(root, text='Save')
-# btn.bind('<Return>', return_pressed)
-
-
-# btn.focus()
-# btn.pack(expand=True)
-
-# root.mainloop()
-
-from tkinter import *
-
-root = Tk()
-root.geometry("500x500")
-root.title("My App")
-root.config(bg="#ff0000")
-
-def printhi(*args):
-	print("Hi!")
+# def Simpletoggle():
     
-btn = Button(root, text="Click to print hi", command=printhi)
-btn.place(x=200, y=200)
+#     if toggle_button.config('text')[-1] == 'ON':
+#         toggle_button.config(text='OFF')
+#     else:
+#         toggle_button.config(text='ON')
 
-root.mainloop()
+# ws = Tk()
+# ws.title("Python Guides")
+# ws.geometry("200x100")
+
+# toggle_button = Button(text="OFF", width=10, command=Simpletoggle)
+# toggle_button.pack(pady=10)
+
+# ws.mainloop()
+
+# ------
+
+# def KleurKnop():
+#     if window.config('background')[-1] == 'yellow':
+#         window.config(background="black")
+#     else:
+#         window.config(background="yellow")
+
+# --------
+
+# from tkinter import *   
+
+# tkWindow = Tk()  
+# tkWindow.geometry('400x150')  
+# tkWindow.title('PythonExamples.org - Tkinter Example')
+  
+# button = Button(tkWindow, text = 'Submit', bg='yellow', activebackground='red')  
+# button.pack()  
+  
+# tkWindow.mainloop()
+
+
+# --------
+
+import tkinter as tk
+
+class Test():
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("250x100")
+        self.buttonA = tk.Button(self.root,
+                                 text = "Color",
+                                 bg = "blue",
+                                 fg = "red")
+
+        self.buttonB = tk.Button(self.root,
+                                text="Click to change color",
+                                bg = "gray",
+                                fg = "purple")
+        self.buttonA.pack(side=tk.LEFT)
+        self.buttonB.pack(side=tk.RIGHT)
+        self.root.mainloop()     
+
+app=Test()
